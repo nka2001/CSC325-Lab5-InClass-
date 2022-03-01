@@ -5,8 +5,8 @@ package com.mycompany.csc325_oop_designreview_lab;
  * @author MoaathAlrajab
  */
 public abstract class Human {
-    private String name;
-	private String address;
+        private String name;
+	protected String address;//switched this to protected, it still allows encapsulation
 	private short age;
 	
 	// constructor that takes only two paras
