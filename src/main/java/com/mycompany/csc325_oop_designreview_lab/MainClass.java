@@ -23,7 +23,7 @@ public class MainClass {
         // ToDo 10: Add a toString method for Senior class
         Student std1 = new Freshman("James", 20, 12); // name, age, credits
 
-        Student std2 = new Senior("John", 30, 90);
+        Student std2 = new Senior("John", 30, 80);
 
         // ToDo 11: Set the gpa of the student using the scanner and user
         // 			input and then print the output.
@@ -32,13 +32,28 @@ public class MainClass {
 
         Scanner scan = new Scanner(System.in);//scanner to retireve user data
 
+        
+        
         System.out.println("please enter your GPA: (0.0-4.0)");
-        int gpa = scan.nextInt();//gets the gpa, stores it in gpa
+       
+        
+        double gpa = scan.nextDouble();//gets the gpa, stores it in gpa
+        
+        if(gpa >= 0.0 && gpa <= 4.0){//checks if the gpa is between 0.0 and 4.0 if it is then...
         std1.setGPA(gpa);//passes it to setGPA
-
+        }else { //if it does not satisfy the if statement, then an error messange is printed
+            System.out.println("error, incorrect gpa entered, must be between 0.0 and 4.0");
+        }
+        
+        
         System.out.println("please enter your GPA: (0.0-4.0)");
-        int gpa2 = scan.nextInt();//gets the gpa, stores it in gpa2
+        
+        double gpa2 = scan.nextDouble();//gets the gpa, stores it in gpa2
+        if(gpa2 >= 0.0 && gpa2 <= 4.0){//checks if the gpa is between 0.0 and 4.0 if it is then...
         std2.setGPA(gpa2);//passes it to setGPA
+        }else { //if it does not satisfy the if statement, then an error messange is printed
+            System.out.println("error, incorrect gpa entered, must be between 0.0 and 4.0");
+        }
 
         System.out.println(std1);
 

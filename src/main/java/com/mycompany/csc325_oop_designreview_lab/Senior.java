@@ -11,7 +11,7 @@ package com.mycompany.csc325_oop_designreview_lab;
 public class Senior extends Student {
 
     private int credits;
-
+    private String hasCredits;
     /**
      * constructor for senior class, sets parameters to variables
      *
@@ -31,7 +31,7 @@ public class Senior extends Student {
      * @return
      */
     public String toString() {
-        String str = "Student Info:  " + super.toString() + ", Address: " + super.getAddress() + ", GPA: " + super.getGpa() + ", Credits: " + credits;
+        String str = "Student Info:  " + super.toString() + ", Address: " + super.getAddress() + ", GPA: " + super.getGpa() + ", Credits: " + credits + " education level: " + hasCredits;
 
         return str;
     }
@@ -43,8 +43,11 @@ public class Senior extends Student {
      */
     public void setCredits(int cred) {
         if (cred < 85) {
-            credits = 0;
+            hasCredits = "not a senior";
+            this.credits = cred;
+            
         } else {
+            hasCredits = " Is a senior";
             this.credits = cred;
         }
 
