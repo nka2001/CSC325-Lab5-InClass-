@@ -11,7 +11,7 @@ package com.mycompany.csc325_oop_designreview_lab;
 public class Freshman extends Student {
 
     private int credits;//member variable credits, used later
-
+    private String hasCredits;
     /**
      * constructor for freshman class, accepts three parameters and sets them
      * accordingly
@@ -43,7 +43,14 @@ public class Freshman extends Student {
      * @param cred
      */
     public void setCredits(int cred) {
-        this.credits = cred;
+         if (cred < 85) {
+            hasCredits = "not a senior";
+            this.credits = cred;
+            
+        } else {
+            hasCredits = " Is a senior";
+            this.credits = cred;
+        }
     }
 
     /**
